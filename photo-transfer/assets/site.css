@@ -502,6 +502,14 @@ h3 {
 }
 
 @media (max-width: 860px) {
+  .privacy-page .site-header {
+    position: sticky;
+  }
+
+  .privacy-page .doc {
+    padding-top: 40px;
+  }
+
   .nav {
     align-items: flex-start;
     padding: 14px 0;
@@ -585,6 +593,10 @@ h3 {
   .doc {
     width: min(100% - 24px, var(--doc));
     padding-top: 168px;
+  }
+
+  .privacy-page .doc {
+    padding-top: 32px;
   }
 
   .doc h1 {
