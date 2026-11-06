@@ -502,11 +502,13 @@ h3 {
 }
 
 @media (max-width: 860px) {
-  .privacy-page .site-header {
+  /* Keep wrapped navigation in flow so it cannot cover the page content. */
+  .site-header {
     position: sticky;
   }
 
-  .privacy-page .doc {
+  .page,
+  .page.doc {
     padding-top: 40px;
   }
 
@@ -527,10 +529,6 @@ h3 {
     grid-template-columns: 1fr;
     gap: 38px;
     min-height: 0;
-  }
-
-  .page {
-    padding-top: 168px;
   }
 
   .hero-art {
@@ -556,7 +554,6 @@ h3 {
 @media (max-width: 520px) {
   .page {
     width: min(100% - 24px, var(--content));
-    padding-top: 168px;
   }
 
   .brand span {
@@ -592,10 +589,10 @@ h3 {
 
   .doc {
     width: min(100% - 24px, var(--doc));
-    padding-top: 168px;
   }
 
-  .privacy-page .doc {
+  .page,
+  .page.doc {
     padding-top: 32px;
   }
 
