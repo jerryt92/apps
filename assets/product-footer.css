@@ -1,0 +1,78 @@
+/* Shared navigation for product, support and privacy pages. */
+.product-footer {
+  --footer-ink: var(--text, var(--ink));
+  --footer-accent: var(--accent, var(--blue));
+  display: block;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0 24px;
+  border-top: 1px solid var(--line);
+  color: var(--footer-ink);
+  font-size: 14px;
+}
+.product-footer .product-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 40px;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 40px;
+}
+.product-footer a { text-decoration: none; }
+.product-footer a:hover { color: var(--footer-accent); }
+.product-footer a:focus-visible {
+  outline: 3px solid var(--footer-accent);
+  outline-offset: 5px;
+  border-radius: 6px;
+}
+.product-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -.025em;
+}
+.product-footer-brand img { display: block; width: 44px; height: 44px; border-radius: 12px; }
+.product-footer-identity p { margin: 16px 0 20px; color: var(--muted); font-size: 13px; }
+.product-footer .product-footer-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel, var(--paper));
+  font-weight: 650;
+}
+.product-footer-home:hover { border-color: var(--footer-accent); }
+.product-footer-group { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+.product-footer-group h2 { margin: 0 0 14px; color: var(--muted); font-size: 12px; font-weight: 650; line-height: 1.6; letter-spacing: .04em; }
+.product-footer-group a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; max-width: 100%; }
+.product-footer-group a[aria-current="page"] { color: var(--footer-accent); font-weight: 650; }
+.product-footer .product-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  width: 100%;
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.product-footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+.product-footer-top { gap: 12px; }
+@media (max-width: 600px) {
+  .product-footer { padding-top: 32px; }
+  .product-footer .product-footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; padding-bottom: 28px; }
+  .product-footer-identity { grid-column: 1 / -1; }
+  .product-footer-identity p { margin: 12px 0 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
