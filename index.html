@@ -1,17 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore PhotoTransfer, MapLab and PhotoAssistant, thoughtful apps by jerryt92 for your photos and maps.">
+  <meta name="description" content="一些有趣而实用的 iPhone 应用：PhotoTransfer、MapLab 与 PhotoAssistant，由 jerryt92 制作。">
   <meta property="og:title" content="jerryt92‘s Apps">
-  <meta property="og:description" content="PhotoTransfer, MapLab and PhotoAssistant: thoughtful apps by jerryt92.">
+  <meta property="og:description" content="一些有趣而实用的 iPhone 应用：PhotoTransfer、MapLab 与 PhotoAssistant，由 jerryt92 制作。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://apps.jerryt92.top/">
   <title>jerryt92‘s Apps</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="stylesheet" href="./assets/site.css">
 </head>
-<body data-title-zh="jerryt92‘s Apps" data-title-en="jerryt92‘s Apps">
+<body data-title-zh="jerryt92‘s Apps" data-title-en="jerryt92‘s Apps" data-desc-zh="一些有趣而实用的 iPhone 应用：PhotoTransfer、MapLab 与 PhotoAssistant，由 jerryt92 制作。" data-desc-en="PhotoTransfer, MapLab and PhotoAssistant: thoughtful apps by jerryt92 for your photos and maps.">
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="./" aria-label="jerryt92‘s Apps">
@@ -43,8 +45,8 @@
       </div>
       <div class="intro-art" aria-hidden="true">
         <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <img class="floating-icon icon-photo" src="./photo-transfer/assets/app-icon.png" alt="">
-        <img class="floating-icon icon-maplab" src="map-lab/assets/app-icon-light.png" alt="">
+        <picture><source media="(prefers-color-scheme: dark)" srcset="./photo-transfer/assets/app-icon-dark.png"><img class="floating-icon icon-photo" src="./photo-transfer/assets/app-icon.png" alt=""></picture>
+        <picture><source media="(prefers-color-scheme: dark)" srcset="map-lab/assets/app-icon-dark.png"><img class="floating-icon icon-maplab" src="map-lab/assets/app-icon-light.png" alt=""></picture>
         <img class="floating-icon icon-photoassistant" src="photo-assistant/assets/pinwheel-logo.png" alt="">
       </div>
     </section>
@@ -61,11 +63,11 @@
       <div class="app-grid">
         <article class="app-card photo-card">
           <div class="card-art photo-art">
-            <img src="./photo-transfer/assets/hero-logo-cards.png" alt="" loading="lazy">
+            <picture><source media="(prefers-color-scheme: dark)" srcset="./photo-transfer/assets/hero-logo-cards-dark.png"><img src="./photo-transfer/assets/hero-logo-cards.png" alt="" loading="lazy"></picture>
             <span class="card-number">01 / 03</span>
           </div>
           <div class="card-content">
-            <div class="card-identity"><img src="./photo-transfer/assets/app-icon.png" alt=""><span class="card-type"><span class="zh-only">照片工具 · iPhone</span><span class="en-only">Photo utility · iPhone</span></span></div>
+            <div class="card-identity"><picture><source media="(prefers-color-scheme: dark)" srcset="./photo-transfer/assets/app-icon-dark.png"><img src="./photo-transfer/assets/app-icon.png" alt=""></picture><span class="card-type"><span class="zh-only">照片工具 · iPhone</span><span class="en-only">Photo utility · iPhone</span></span></div>
             <h3>PhotoTransfer</h3>
             <p class="card-description zh-only">从「文件」导入或导出到任意文件夹，导入导出进度在 App、锁屏和灵动岛都能看到。</p>
             <p class="card-description en-only">Import from Files or export to any folder, with progress on the Lock Screen and in the Dynamic Island.</p>
@@ -79,11 +81,11 @@
         </article>
         <article class="app-card maplab-card">
           <div class="card-art maplab-art">
-            <img src="map-lab/assets/app-icon-light.png" alt="" loading="lazy">
+            <picture><source media="(prefers-color-scheme: dark)" srcset="map-lab/assets/app-icon-dark.png"><img src="map-lab/assets/app-icon-light.png" alt="" loading="lazy"></picture>
             <span class="card-number">02 / 03</span>
           </div>
           <div class="card-content">
-            <div class="card-identity"><img src="map-lab/assets/app-icon-light.png" alt=""><span class="card-type"><span class="zh-only">地图探索 · iPhone / iPad</span><span class="en-only">Map exploration · iPhone / iPad</span></span></div>
+            <div class="card-identity"><picture><source media="(prefers-color-scheme: dark)" srcset="map-lab/assets/app-icon-dark.png"><img src="map-lab/assets/app-icon-light.png" alt=""></picture><span class="card-type"><span class="zh-only">地图探索 · iPhone / iPad</span><span class="en-only">Map exploration · iPhone / iPad</span></span></div>
             <h3>MapLab</h3>
             <p class="card-description zh-only">基于地图拓展的创意使用工具，双图对比、地点搜索与图层探索自由组合，让一张地图拥有多种打开方式。</p>
             <p class="card-description en-only">A creative toolkit built on maps—combine side-by-side comparison, place search and layer exploration to open one map in many ways.</p>

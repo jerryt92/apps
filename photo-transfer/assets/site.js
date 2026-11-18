@@ -20,11 +20,34 @@
     return lang === "zh" ? (zh || en || document.title) : (en || zh || document.title);
   }
 
+  function pageDescription(lang) {
+    var zh = document.body.getAttribute("data-desc-zh");
+    var en = document.body.getAttribute("data-desc-en");
+    return lang === "zh" ? (zh || en) : (en || zh);
+  }
+
+  function setMeta(attr, key, value) {
+    if (!value) return;
+    var tag = document.querySelector("meta[" + attr + "=\"" + key + "\"]");
+    if (tag) tag.setAttribute("content", value);
+  }
+
+  /* Keep share cards (og:* / description) in the language actually shown. */
+  function syncShareMetadata(lang) {
+    var desc = pageDescription(lang);
+    setMeta("name", "description", desc);
+    setMeta("property", "og:title", pageTitle(lang));
+    setMeta("property", "og:description", desc);
+    setMeta("property", "og:locale", lang === "zh" ? "zh_CN" : "en_US");
+    setMeta("property", "og:locale:alternate", lang === "zh" ? "en_US" : "zh_CN");
+  }
+
   function setLanguage(lang, persist) {
     if (!supported[lang]) lang = "en";
     document.body.setAttribute("data-lang", lang);
     document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
     document.title = pageTitle(lang);
+    syncShareMetadata(lang);
     var buttons = document.querySelectorAll("[data-set-lang]");
     for (var i = 0; i < buttons.length; i += 1) {
       var active = buttons[i].getAttribute("data-set-lang") === lang;
