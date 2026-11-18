@@ -50,4 +50,10 @@
     if (!button) return;
     setLanguage(button.getAttribute("data-set-lang"), true);
   });
+
+  var year = String(new Date().getFullYear());
+  var yearNodes = document.querySelectorAll("[data-year]");
+  for (var i = 0; i < yearNodes.length; i += 1) {
+    yearNodes[i].textContent = year;
+  }
 }());

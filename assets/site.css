@@ -21,8 +21,7 @@ button { font: inherit; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: 17px; font-weight: 820; letter-spacing: -.025em; white-space: nowrap; }
 .brand-mark { width: 36px; height: 36px; display: inline-grid; place-items: center; border-radius: 11px; background: linear-gradient(145deg,#173d6d,#116b56); color: #fff; font-size: 24px; font-weight: 760; font-family: Georgia, serif; }
 .nav-actions { display: flex; align-items: center; gap: 20px; }
-.nav-apps { text-decoration: none; font-size: 14px; font-weight: 700; }
-.nav-apps:hover, .explore-link:hover, .text-link:hover { color: var(--green); }
+.text-link:hover { color: var(--green); }
 .language-switch { display: inline-flex; gap: 2px; padding: 4px; background: #edf1f0; border-radius: 999px; }
 .language-switch button { min-height: 34px; padding: 5px 12px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-size: 12px; font-weight: 750; cursor: pointer; }
 .language-switch button[aria-pressed="true"] { color: #fff; background: var(--ink); }
@@ -35,9 +34,7 @@ h1, h2, h3, p { margin-top: 0; }
 h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(52px,8vw,102px); line-height: 1.04; letter-spacing: -.07em; }
 .heading-accent { color: var(--green); }
 .lead { margin-bottom: 12px; font-size: clamp(22px,2.7vw,31px); font-weight: 650; letter-spacing: -.035em; }
-.intro-detail { max-width: 530px; margin-bottom: 30px; color: var(--muted); font-size: 16px; line-height: 1.8; }
-.explore-link { display: inline-flex; align-items: center; gap: 20px; text-decoration: none; font-size: 14px; font-weight: 800; }
-.explore-link span:last-child { font-size: 22px; line-height: 1; }
+.intro-detail { max-width: 530px; margin-bottom: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .intro-art { position: relative; height: 360px; }
 .art-orbit { position: absolute; border: 1px solid rgba(35,96,77,.14); border-radius: 50%; transform: rotate(-25deg); }
 .orbit-one { width: 420px; height: 230px; top: 65px; left: 0; }
@@ -51,7 +48,7 @@ h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(52px,8vw,102px); li
 .section-kicker { margin-bottom: 9px; }
 h2 { margin-bottom: 0; font-size: clamp(32px,4vw,48px); letter-spacing: -.055em; line-height: 1.15; }
 .app-count { color: #91a0a6; font-size: 13px; font-weight: 800; letter-spacing: .2em; white-space: nowrap; }
-.app-grid { display: grid; grid-template-columns: minmax(0,1fr); max-width: 680px; gap: 24px; }
+.app-grid { display: grid; grid-template-columns: minmax(0,1fr); max-width: 680px; margin: 0 auto; gap: 24px; }
 .app-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 26px; background: var(--surface); box-shadow: 0 16px 40px rgba(18,40,44,.045); }
 .card-art { flex-shrink: 0; position: relative; height: 270px; overflow: hidden; }
 .card-art > img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -70,6 +67,11 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
 .primary-link:hover { filter: brightness(1.15); }
 .text-link { color: var(--muted); font-size: 12px; font-weight: 750; text-decoration: none; }
 .footer { display: flex; justify-content: space-between; gap: 20px; width: min(1160px,calc(100% - 48px)); margin: auto; padding: 28px 0 42px; color: var(--muted); font-size: 12px; }
+.footer-credit { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border-radius: 5px; }
+.footer-credit img { display: block; width: 20px; height: 20px; border-radius: 5px; border: 1px solid var(--line); }
+.footer-credit:hover { color: var(--green); }
+.footer-credit:hover img { opacity: .75; }
+.footer-credit:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
 @media (max-width: 780px) {
   .intro { grid-template-columns: 1fr; padding: 66px 0 58px; }
@@ -78,7 +80,6 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
   .orbit-two { width: 260px; height: 125px; top: 32px; left: 65px; }
   .floating-icon { width: 100px; height: 100px; border-radius: 23px; }
   .apps-section { padding-top: 55px; padding-bottom: 75px; }
-  .app-grid { grid-template-columns: 1fr; }
   .card-description { min-height: 0; }
 }
 
@@ -87,7 +88,6 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
   .brand { font-size: 14px; gap: 8px; }
   .brand-mark { width: 31px; height: 31px; font-size: 21px; }
   .nav-actions { gap: 8px; }
-  .nav-apps { display: none; }
   .language-switch button { padding: 4px 9px; }
   .intro { width: calc(100% - 36px); }
   .apps-section { padding-left: 18px; padding-right: 18px; }
@@ -100,11 +100,9 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* MapLab collection entry */
-.app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; }
 .maplab-art { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 30%, #edfaff, #c5e5f3); }
 .maplab-art > img { width: 164px; height: 164px; border-radius: 36px; object-fit: cover; transform: rotate(-8deg); box-shadow: 0 20px 45px #17618c25; }
 .maplab-card .primary-link { background: #0869bc; }
-@media (max-width: 780px) { .app-grid { grid-template-columns: 1fr; } }
 
 /* Reuse the same black App Store badge as PhotoTransfer. */
 .app-store-badge { display: inline-block; width: 190px; max-width: 100%; line-height: 0; text-decoration: none; flex-shrink: 0; filter: drop-shadow(0 10px 26px rgba(0,0,0,.18)); }
@@ -124,3 +122,13 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
 .floating-icon.icon-photoassistant { border: 0; border-radius: 0; box-shadow: none; }
 .icon-photoassistant { top: 26%; left: 76%; transform: translate(-50%, -50%) rotate(9deg); }
 @media (max-width: 780px) { .icon-photoassistant { top: 24%; left: 80%; } }
+
+/* Three balanced columns on wide screens; a single centered column below. */
+@media (min-width: 1160px) {
+  .app-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+  .card-content { padding: 26px 28px 28px; }
+  .card-links { gap: 12px 14px; }
+  .card-links .primary-link { height: 40px; }
+  .card-links .app-store-badge, .card-links .app-store-badge img { height: 40px; }
+  .card-links .text-link { min-height: 40px; }
+}
