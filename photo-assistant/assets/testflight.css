@@ -38,6 +38,10 @@
   margin-bottom: 20px;
 }
 
+.beta-device-logo {
+  padding: 8px;
+}
+
 .beta-label {
   color: var(--accent);
   font-size: .875rem;

@@ -25,6 +25,22 @@ class PreviewHandler(SimpleHTTPRequestHandler):
         self.send_error(HTTPStatus.NOT_FOUND)
         return None
 
+    def send_error(self, code, message=None, explain=None):
+        if code != HTTPStatus.NOT_FOUND:
+            return super().send_error(code, message, explain)
+
+        try:
+            page = (SITE_ROOT / "404.html").read_bytes()
+        except OSError:
+            return super().send_error(code, message, explain)
+
+        self.send_response(code)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(page)))
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(page)
+
 
 class DualStackHTTPServer(ThreadingHTTPServer):
     address_family = socket.AF_INET6
