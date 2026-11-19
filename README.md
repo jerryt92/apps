@@ -4,7 +4,7 @@ Static bilingual app collection for PhotoTransfer, MapLab and PhotoAssistant.
 
 ## Local preview
 
-Run `python3 -m http.server 8000` from this directory and open `http://localhost:8000/`.
+Run `python3 serve.py` from this directory and open `http://localhost:8765/`. On a device connected to the same network, use one of the printed LAN URLs. Press Ctrl+C to stop the server.
 
 ## Routes
 

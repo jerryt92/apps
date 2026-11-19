@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <title>PhotoAssistant · TestFlight Beta</title>
+  <meta name="description" content="Join the PhotoAssistant public beta on TestFlight.">
+  <meta property="og:title" content="PhotoAssistant · TestFlight Beta">
+  <meta property="og:description" content="Join the PhotoAssistant public beta on TestFlight.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:image" content="https://apps.jerryt92.top/photo-assistant/assets/pinwheel-logo.png">
+  <meta property="og:url" content="https://apps.jerryt92.top/photo-assistant/testflight/">
+  <link rel="canonical" href="https://apps.jerryt92.top/photo-assistant/testflight/">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/testflight.css">
+  <script src="../../assets/site.js" defer></script>
+  <script src="../assets/testflight.js" defer></script>
+</head>
+<body class="testflight-page" data-title-zh="PhotoAssistant · TestFlight 公测" data-title-en="PhotoAssistant · TestFlight Beta" data-desc-zh="通过 TestFlight 加入 PhotoAssistant 公开测试。" data-desc-en="Join the PhotoAssistant public beta on TestFlight.">
+  <a class="skip" href="#main"><span class="zh-only" lang="zh-Hans">跳到正文</span><span class="en-only" lang="en">Skip to content</span></a>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../"><img src="../assets/pinwheel-logo.png" alt="" width="48" height="48"><span>PhotoAssistant</span></a>
+      <div class="nav-links">
+        <span class="language-switch" aria-label="Language"><button type="button" data-set-lang="zh" aria-pressed="false">中文</button><button type="button" data-set-lang="en" aria-pressed="false">EN</button></span>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="beta-main wrap">
+    <section class="beta-hero" aria-labelledby="beta-title" hidden>
+      <div class="beta-copy">
+        <img class="beta-logo" src="../assets/pinwheel-logo.png" alt="" width="104" height="104">
+        <p class="beta-label">PhotoAssistant</p>
+        <h1 id="beta-title"><span class="zh-only" lang="zh-Hans">加入公测</span><span class="en-only" lang="en">Join the public beta</span></h1>
+        <p class="lead"><span class="zh-only" lang="zh-Hans">在 iPhone 或 iPad 上抢先体验 PhotoAssistant，通过 TestFlight 安装测试版并分享你的反馈。</span><span class="en-only" lang="en">Try PhotoAssistant early on iPhone or iPad. Install the beta with TestFlight and share your feedback.</span></p>
+        <a class="button primary beta-action" id="join-beta" data-invite="https://testflight.apple.com/join/b6hXEJPP">
+          <span class="zh-only" lang="zh-Hans">在 TestFlight 中加入</span><span class="en-only" lang="en">Join on TestFlight</span>
+        </a>
+      </div>
+      <div class="beta-preview" aria-hidden="true">
+        <div class="phone real-device">
+          <img src="../assets/photo-grid-zh.png" alt="" width="644" height="1400" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="beta-gate" id="device-required" aria-labelledby="device-title" hidden>
+      <img class="beta-logo" src="../assets/pinwheel-logo.png" alt="" width="104" height="104">
+      <p class="beta-label">PhotoAssistant · TestFlight</p>
+      <h1 id="device-title"><span class="zh-only" lang="zh-Hans">请使用 Apple 设备</span><span class="en-only" lang="en">Use an Apple device</span></h1>
+      <p class="lead"><span class="zh-only" lang="zh-Hans">当前设备无法进入公测。请在 Apple 设备的 Safari 浏览器中打开此页面。</span><span class="en-only" lang="en">To access the beta, open this page in Safari on an Apple device.</span></p>
+    </section>
+
+    <section class="beta-gate" id="safari-required" aria-labelledby="safari-title" hidden>
+      <img class="beta-logo" src="../../assets/safari-logo.webp" alt="" width="104" height="104">
+      <p class="beta-label">PhotoAssistant · TestFlight</p>
+      <h1 id="safari-title"><span class="zh-only" lang="zh-Hans">请用 Safari 打开</span><span class="en-only" lang="en">Open in Safari</span></h1>
+      <p class="lead beta-wechat-guide" id="wechat-safari-guide" hidden>
+        <span class="zh-only" lang="zh-Hans">点微信右上角的<strong>「⋯」</strong>，选择<strong>「在浏览器打开」</strong>。如果出现浏览器列表，选 Safari。</span>
+        <span class="en-only" lang="en">Tap <strong>⋯</strong> in the top-right corner of WeChat and choose <strong>Open in Browser</strong>. If asked which browser to use, select Safari.</span>
+      </p>
+      <div>
+        <p class="lead"><span class="zh-only" lang="zh-Hans">点下方按钮复制链接，再粘贴到 Safari 地址栏，即可进入公测。</span><span class="en-only" lang="en">Tap the button below to copy the link, then paste it into Safari to access the beta.</span></p>
+        <button class="button primary beta-action" id="copy-beta-link" type="button">
+          <span class="zh-only" lang="zh-Hans">复制页面链接</span><span class="en-only" lang="en">Copy page link</span>
+        </button>
+        <div class="beta-copy-status" role="status">
+          <p id="link-copied" hidden><span class="zh-only" lang="zh-Hans">链接已复制</span><span class="en-only" lang="en">Link copied</span></p>
+        </div>
+        <label class="beta-manual" id="manual-copy" hidden>
+          <span class="zh-only" lang="zh-Hans">请手动复制以下地址</span><span class="en-only" lang="en">Copy this address manually</span>
+          <input id="beta-address" type="text" readonly>
+        </label>
+      </div>
+    </section>
+
+    <noscript>
+      <section class="beta-gate">
+        <h1>PhotoAssistant · TestFlight</h1>
+        <p lang="zh-Hans">请在 Apple 设备的 Safari 中启用 JavaScript 后重新打开此页面。</p>
+        <p>Enable JavaScript in Safari on an Apple device, then reload this page.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <footer class="beta-footer wrap">
+    <a href="../support/"><span class="zh-only" lang="zh-Hans">技术支持</span><span class="en-only" lang="en">Support</span></a>
+    <a href="../privacy/"><span class="zh-only" lang="zh-Hans">隐私政策</span><span class="en-only" lang="en">Privacy</span></a>
+    <span>© <span data-year>2026</span> jerryt92</span>
+  </footer>
+</body>
+</html>
