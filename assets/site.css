@@ -178,9 +178,11 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
 
 /* LunaScope collection entry */
 .lunascope-art { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 25%, #def0ed, #cadee9); }
-.lunascope-art img { width: 148px; height: 148px; border-radius: 32px; box-shadow: 0 16px 30px #173d6d26; }
+.lunascope-art img { width: 148px; height: 148px; padding: 16px; border-radius: 32px; box-shadow: 0 16px 30px #173d6d26; }
+.lunascope-art img, .lunascope-card .card-identity img, .icon-lunascope { background: #0e1214; }
+.lunascope-card .card-identity img { padding: 4px; }
 .lunascope-card .primary-link { background: #176471; }
-.icon-lunascope { width: 117px; height: 117px; top: 76%; left: 34%; transform: translate(-50%, -50%) rotate(-10deg); }
+.icon-lunascope { width: 117px; height: 117px; padding: 10px; top: 76%; left: 34%; transform: translate(-50%, -50%) rotate(-10deg); }
 
 @media (max-width: 780px) {
   .icon-lunascope { width: 82px; height: 82px; top: 77%; left: 28%; }
