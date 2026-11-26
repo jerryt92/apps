@@ -14,7 +14,6 @@
 
 .lunascope-page .site-header { background: #10191e; }
 .lunascope-page .nav { min-height: 72px; }
-.lunascope-page .brand img { padding: 4px; border-radius: 9px; background: #0e1214; }
 .lunascope-page .language-switch { background: #203039; }
 .lunascope-page .language-switch button { font-size: .875rem; }
 .lunascope-page .language-switch button[aria-pressed="true"] { color: #10191e; background: var(--accent); }
@@ -140,7 +139,6 @@
   background: #17262d;
 }
 
-.download-section > img { padding: 7px; border-radius: 1rem; background: #0e1214; }
 .download-section h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); }
 .download-section p { color: var(--muted); margin: .35rem 0 0; }
 .download-section .app-store-badge { margin-left: auto; }
