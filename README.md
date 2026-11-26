@@ -1,6 +1,6 @@
 # jerryt92‘s Apps
 
-Static bilingual app collection for PhotoTransfer, MapLab and PhotoAssistant.
+Static bilingual app collection for PhotoTransfer, MapLab, PhotoAssistant and LunaScope.
 
 ## Local preview
 
@@ -12,6 +12,7 @@ Run `python3 serve.py` from this directory and open `http://localhost:8765/`. On
 - `/photo-transfer/`, `/photo-transfer/support/`, `/photo-transfer/privacy/`
 - `/maplab/`, `/maplab/support/`, `/maplab/privacy/`
 - `/photo-assistant/`, `/photo-assistant/support/`, `/photo-assistant/privacy/`
+- `/luna-scope/`
 
 The PhotoTransfer site is in its own folder, with separate styles and assets. Language preference is shared across all pages in this site.
 

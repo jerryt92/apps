@@ -50,14 +50,12 @@ h1 { max-width: 700px; margin-bottom: 20px; font-size: clamp(52px,8vw,102px); li
 .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 32px; }
 .section-kicker { margin-bottom: 9px; }
 h2 { margin-bottom: 0; font-size: clamp(32px,4vw,48px); letter-spacing: -.055em; line-height: 1.15; }
-.app-count { color: #91a0a6; font-size: 13px; font-weight: 800; letter-spacing: .2em; white-space: nowrap; }
 .app-grid { display: grid; grid-template-columns: minmax(0,1fr); max-width: 680px; margin: 0 auto; gap: 24px; }
 .app-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 26px; background: var(--surface); box-shadow: 0 16px 40px rgba(18,40,44,.045); }
 .card-art { flex-shrink: 0; position: relative; height: 270px; overflow: hidden; }
 .card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .photo-art { display: grid; place-items: center; background: radial-gradient(circle at 50% 50%,#e6f7f4,#e1ebf6 65%,#cdddec); }
 .photo-art img { width: 76%; height: 86%; object-fit: contain; }
-.card-number { position: absolute; left: 22px; top: 19px; padding: 7px 12px; border-radius: 99px; color: #fff; background: rgba(22,32,39,.5); backdrop-filter: blur(8px); font-size: 11px; font-weight: 750; letter-spacing: .08em; }
 .card-content { display: flex; flex-direction: column; flex: 1; padding: 28px 32px 30px; }
 .card-identity { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
 .card-identity img { width: 42px; height: 42px; border-radius: 11px; }
@@ -178,9 +176,18 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
 .icon-photoassistant { top: 26%; left: 76%; transform: translate(-50%, -50%) rotate(9deg); }
 @media (max-width: 780px) { .icon-photoassistant { top: 24%; left: 80%; } }
 
-/* Three balanced columns on wide screens; a single centered column below. */
-@media (min-width: 1160px) {
-  .app-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+/* LunaScope collection entry */
+.lunascope-art { display: grid; place-items: center; background: radial-gradient(ellipse at 50% 25%, #def0ed, #cadee9); }
+.lunascope-art img { width: 148px; height: 148px; border-radius: 32px; box-shadow: 0 16px 30px #173d6d26; }
+.lunascope-card .primary-link { background: #176471; }
+.icon-lunascope { width: 117px; height: 117px; top: 76%; left: 34%; transform: translate(-50%, -50%) rotate(-10deg); }
+
+@media (max-width: 780px) {
+  .icon-lunascope { width: 82px; height: 82px; top: 77%; left: 28%; }
+}
+
+@media (min-width: 820px) {
+  .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; }
   .card-content { padding: 26px 28px 28px; }
   .card-links { gap: 12px 14px; }
   .card-links .primary-link { height: 40px; }
@@ -208,11 +215,12 @@ h3 { margin-bottom: 8px; font-size: clamp(28px,3vw,38px); line-height: 1.2; lett
   .art-orbit { border-color: rgba(111,199,164,.16); }
   .floating-icon { border-color: rgba(16,31,45,.9); box-shadow: 0 28px 55px rgba(0,0,0,.5); }
   .apps-section { background: var(--surface); }
-  .app-count { color: #64798c; }
   .app-card { box-shadow: 0 16px 40px rgba(0,0,0,.35); }
   .photo-art { background: radial-gradient(circle at 50% 50%,#14303c,#122536 65%,#0f1e2c); }
   .maplab-art { background: radial-gradient(ellipse at 50% 30%,#12283a,#0e1f2e); }
   .photoassistant-art { background: radial-gradient(ellipse at 50% 30%,#2b1724,#22121b 70%,#1a0e15); }
+  .lunascope-art { background: radial-gradient(ellipse at 50% 25%, #284953, #122530 75%); }
+  .lunascope-card .primary-link { background: #87d8e3; color: #10252c; }
   .primary-link { background: #6fc7a4; color: #0a1722; }
   .photo-card .primary-link { background: #6dbbff; color: #092037; }
   .maplab-card .primary-link { background: #6dbbff; color: #092037; }
