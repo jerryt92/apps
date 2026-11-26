@@ -12,7 +12,7 @@ Run `python3 serve.py` from this directory and open `http://localhost:8765/`. On
 - `/photo-transfer/`, `/photo-transfer/support/`, `/photo-transfer/privacy/`
 - `/maplab/`, `/maplab/support/`, `/maplab/privacy/`
 - `/photo-assistant/`, `/photo-assistant/support/`, `/photo-assistant/privacy/`
-- `/luna-scope/`, `/luna-scope/support/`, `/luna-scope/privacy/`
+- `/luna-scope/`, `/luna-scope/support/`, `/luna-scope/privacy/`, `/luna-scope/licenses/`
 
 The PhotoTransfer site is in its own folder, with separate styles and assets. Language preference is shared across all pages in this site.
 
